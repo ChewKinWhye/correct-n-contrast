@@ -202,7 +202,7 @@ def init_args(args):
     
 def update_args(args):
     args.experiment_name = f'{args.contrastive_type}'
-    
+    args.experiment_name += f'{args.arch}'
     model_params_s = f'-spur-me={args.max_epoch_s}-bst={args.bs_trn_s}-lr={args.lr_s}-mo={args.momentum_s}-wd={args.weight_decay_s}-sts={args.spurious_train_split}'
     
     if args.dataset == 'colored_mnist':

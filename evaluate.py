@@ -30,7 +30,7 @@ def evaluate_model(model, dataloaders, modes, test_criterion, args, epoch):
     print(f'Robust acc: {robust_acc}')
     print(f'Max robust acc: {args.max_robust_acc}')
     
-    if robust_acc > args.max_robust_acc:
+    if robust_acc[1] > args.max_robust_acc:
         print(f'New max robust acc: {robust_acc}')
         args.max_robust_acc = robust_acc
         args.max_robust_epoch = epoch
